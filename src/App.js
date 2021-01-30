@@ -1,10 +1,9 @@
 import React from 'react';
+import { Dashboard } from "./Dashboard/Dasboard";
 
 function App() {
   return (
-    <div>
-      Hello World
-    </div>
+    <Dashboard />
   );
 }
 
