@@ -6,18 +6,22 @@ import HighchartsReact from "highcharts-react-official";
 const options = {
     chart: {
 		height: '360px',
-        type: 'column'
+        type: 'column',
+		style: {
+            fontFamily: `'Lora', serif`,
+        },
     },
     title: {
-        text: 'Stacked column chart'
+        text: 'Revenue by Products'
     },
     xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     },
     yAxis: {
         min: 0,
+		reversedStacks: false,
         title: {
-            text: 'Total fruit consumption'
+            text: 'Total Profit Percentage'
         }
     },
     tooltip: {
@@ -25,19 +29,29 @@ const options = {
         shared: true
     },
     plotOptions: {
+		series: {
+			borderWidth: 0,
+		},
         column: {
             stacking: 'percent'
         }
     },
     series: [{
-        name: 'John',
-        data: [5, 3, 4, 7, 2]
+        name: 'BTC',
+        data: [5, 3, 4, 7, 2],
+		color: '#00698F',
     }, {
-        name: 'Jane',
-        data: [2, 2, 3, 2, 1]
+        name: 'ETX',
+        data: [2, 2, 3, 2, 1],
+		color: '#0096cc',
     }, {
-        name: 'Joe',
-        data: [3, 4, 4, 2, 5]
+        name: 'RXL',
+        data: [3, 4, 4, 2, 5],
+		color: '#00B4F5',
+    }, {
+        name: 'ETH',
+        data: [3, 4, 4, 2, 5],
+		color: '#47CEFF',
     }]
 }
 
