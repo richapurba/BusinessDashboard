@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "./Card";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import { chartData } from "./Data";
 
 const options = {
     chart: {
@@ -33,26 +34,10 @@ const options = {
 			borderWidth: 0,
 		},
         column: {
-            stacking: 'percent'
+            stacking: 'normal'
         }
     },
-    series: [{
-        name: 'BTC',
-        data: [5, 3, 4, 7, 2],
-		color: '#00698F',
-    }, {
-        name: 'ETX',
-        data: [2, 2, 3, 2, 1],
-		color: '#0096cc',
-    }, {
-        name: 'RXL',
-        data: [3, 4, 4, 2, 5],
-		color: '#00B4F5',
-    }, {
-        name: 'ETH',
-        data: [3, 4, 4, 2, 5],
-		color: '#47CEFF',
-    }]
+    series: chartData,
 }
 
 export function Chart() {
