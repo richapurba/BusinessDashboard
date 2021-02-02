@@ -50,8 +50,40 @@ function format(num){
 
 export const tableRows = months.map((month, i) => ({
 	month,
-	BTC: format(chartData[0].data[i]),
-	ETX: format(chartData[1].data[i]),
-	RXL: format(chartData[2].data[i]),
-	ETH: format(chartData[3].data[i])
+	btc: format(chartData[0].data[i]),
+	etx: format(chartData[1].data[i]),
+	rxl: format(chartData[2].data[i]),
+	eth: format(chartData[3].data[i])
 }))
+
+export const tableColumns = (
+	{
+		width: 240,
+		label: 'Month',
+		dataKey: 'month'
+	},
+	{
+		width: 240,
+		label: 'BTC',
+		dataKey: 'btc',
+		numeric: true
+	},
+	{
+		width: 240,
+		label: 'ETX',
+		dataKey: 'etx',
+		numeric: true
+	},
+	{
+		width: 240,
+		label: 'RXL',
+		dataKey: 'rxl',
+		numeric: true
+	},
+	{
+		width: 240,
+		label: 'ETH',
+		dataKey: 'eth',
+		numeric: true
+	}
+);
